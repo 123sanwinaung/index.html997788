@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Countdown Redirect</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      color: #333;
+    }
+    .countdown {
+      font-size: 40px;
+      color: red;
+      margin: 20px 0;
+    }
+    .banner {
+      margin-top: 30px;
+    }
+    .telegram-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #0088cc;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎬 ဇာတ်ကားကြည့်ရန် ၅ စက္ကန့်စောင့်ပါ</h1>
+  <div class="countdown" id="countdown">5</div>
+
+  <!-- ကိုယ်ပိုင်ကြေငြာဓာတ်ပုံ -->
+  <div class="banner">
+    <img src="https://i.ibb.co/5G7HMWf/banner.jpg" alt="ကြေငြာ" width="300">
+  </div>
+
+  <!-- Telegram link -->
+  <a href="http://t.me/gb168vip2" class="telegram-link" target="_blank" rel="noopener noreferrer">
+    ဆက်သွယ်ရန် Telegram
+  </a>
+
+  <script>
+    let timeLeft = 5;
+    const countdown = document.getElementById("countdown");
+    const targetURL = "https://t.me/c/2611179734/203";
+
+    const interval = setInterval(() => {
+      timeLeft--;
+      countdown.innerText = timeLeft;
+
+      if (timeLeft <= 0) {
+        clearInterval(interval);
+        window.location.href = targetURL;
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>
